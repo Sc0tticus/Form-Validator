@@ -58,9 +58,6 @@ function checkLength(input, min = 6, max = 15) {
 
 // Check passwords match
 function checkPasswordsMatch(input1, input2) {
-	console.log('input1', input1.value);
-	console.log('input2', input2.value);
-
 	if (input1.value !== input2.value) {
 		showError(input2, 'Passwords do not match');
 	}
