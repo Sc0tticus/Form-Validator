@@ -54,3 +54,11 @@ margin-bottom: 5px; adds a margin of 5 pixels at the bottom of each label. This 
 ### Bugs Fixed
 
 The visibility was hidden for the form error css style. Making it visible has now allowed me to see the form validation errors.
+
+### Adding TypeScript
+
+1. `npm init -y`
+
+2. `npm install typescript --save-dev`
+
+3. `npx tsc --init`
