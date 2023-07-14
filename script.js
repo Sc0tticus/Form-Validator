@@ -46,18 +46,21 @@ function checkRequired(inputArr) {
 }
 
 // Check input length
-function checkLength(input, min, max) {
+function checkLength(input, min = 6, max = 15) {
 	if (input.value.length < min) {
 		showError(input, `${getFieldName(input)} must be at least ${min} characters`);
 	} else if (input.value.length > max) {
 		showError(input, `${getFieldName(input)} must be less than ${max} charactes`);
 	} else {
-		showSuccess();
+		showSuccess(input);
 	}
 }
 
 // Check passwords match
 function checkPasswordsMatch(input1, input2) {
+	console.log('input1', input1.value);
+	console.log('input2', input2.value);
+
 	if (input1.value !== input2.value) {
 		showError(input2, 'Passwords do not match');
 	}
@@ -73,8 +76,12 @@ form.addEventListener('submit', function (e) {
 	e.preventDefault();
 
 	checkRequired([username, email, password, password2]);
+
 	checkLength(username, 3, 15);
 	checkLength(password, 6, 25);
+	checkLength(password2, 6, 25);
+
 	checkEmail(email);
+
 	checkPasswordsMatch(password, password2);
 });
