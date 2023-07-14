@@ -50,3 +50,7 @@ The .form-control label selector targets the <label> elements that are descendan
 color: #777; sets the color of the label text to a shade of gray (#777).
 display: block; makes the labels appear as block-level elements. This causes them to start on a new line and take up the full width available.
 margin-bottom: 5px; adds a margin of 5 pixels at the bottom of each label. This creates spacing between labels and the form controls they are associated with.
+
+### Bugs Fixed
+
+The visibility was hidden for the form error css style. Making it visible has now allowed me to see the form validation errors.
